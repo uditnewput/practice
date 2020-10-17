@@ -3,82 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<title>Restaurant Website</title>
-	<style>
-		nav{
-			position: sticky;
-			top: 0;
-			text-align: center;
-			margin-top: 30px;
-			margin-bottom: 20px
-		}
-		button{
-			width: 19%;
-			padding: 7px;
-			background-color: #ffcc00;
-			color: black;
-			border: none;
-			font-weight: bold;
-			font-size: 16px;
-			margin: 4px;
-			height: 35px;
-		}
-		header,main,footer{
-			margin-left: 9px;
-			margin-right: 9px;
-			clear: both;
-		}
-		div.price{
-			width:415px;
-			height: 160px;
-			background-color: #ffcc00;
-			color: black;
-			float: right;
-			
-			text-align: center;
-			margin-top: 10px;
-			font-weight: bold;
-			padding-top: 40px;
-			
-
-		}
-		div.cards{
-			width: 256px;
-			height: 190px;
-			background-color: white;
-			color: black;
-			text-align: center;
-		
-			padding: 20px;
-			float: left;
-			margin-top: 20px;
-			overflow: auto;
-
-		}
-		main div span{
-			font-weight: bold;
-		}
-		div.full{
-			width: 100%;
-			height: 350px;
-			margin-top: 20px;
-			background-color: white;
-			color: black;
-			float: right;
-			margin-bottom: 20px
-			
-		}
-		img.square{
-			width: 187px;
-			height: 187px;
-			
-			float: left;
-			margin-right: 24px; 
-			margin-bottom: 24px;
-			margin-top: 20px;
-		}
-	</style>
+	<link rel="stylesheet" href="style.css">
 </head>
-<body style="background-image: linear-gradient(115deg ,#FF33a0 ,#8040bf); background-size: cover;)">
+<body>
 
 
 <nav>
@@ -106,53 +33,55 @@
 </header>
 <main>
 	<div>
-		<div class="cards" style="margin-right: 20px;">
-			<img src="taco.png" alt="taco" width="60px"><br>
+		<div class="cards">
+			<img src="taco.png" alt="taco" class="cards"><br>
 			<span>Tacos</span>
 			<p>
 				A taco is a traditional Mexican dish consisting of a small hand-sized corn or wheat tortilla topped with a filling. The tortilla is then folded around the filling and eaten by hand.
 			</p>	
 		</div>
 	</div>
-	<div class="cards" style="margin-right: 20px;">
-			<img src="beer.png" alt="taco" width="60px"><br>
+	<div class="cards">
+			<img src="beer.png" alt="taco" class="cards"><br>
 			<span>Beer</span>
 			<p>
 				Beer is one of the oldest and most widely consumed alcoholic drinks in the world, and the third most popular drink overall after water and tea. 
 			</p>	
 		</div>
 	</div>
-	<div class="cards" style="margin-right: 20px;">
-			<img src="wine.png" alt="taco" width="60px"><br>
+	<div class="cards">
+			<img src="wine.png" alt="taco" class="cards"><br>
 			<span>Wine</span>
 			<p>
 				Wine is an alcoholic drink typically made from fermented grape juice. Yeast consumes the sugar in the grapes and converts it to ethanol, carbon dioxide, and heat. 
 			</p>	
 		</div>
 	</div>
-	<div class="cards">
-			<img src="music.png" alt="taco" width="60px"><br>
+	<div class="cards" style="margin-right: 0px;">
+			<img src="music.png" alt="taco" class="cards"><br>
 			<span>Music</span>
 			<p>
 				Music is an art form, and cultural activity, whose medium is sound. General definitions of music include common elements such as pitch, rhythm, dynamics, and the sonic qualities of timbre and texture.
 			</p>	
 		</div>
 	</div>
+
 	<div class="full">
-		<img src="taco4.png" width="400px" style="margin-top: 20px; float: left">
-		<div style="float:left;margin-top: 50px;margin-left: 30px;">
+		<img src="taco4.png" alt="taco" class="ful">
+		<div class="ful">
 		<p style="font-size: 35px">Featured Taco</p>
 		<h4>Slim Profile, easy to hold and loaded with cheese.</h4>
-		<h4>Thia ia the one you've been waiting for.</h4>
-		<button style="width: 40%;font-weight: none">Click Here &rarr;</button>
+		<h4>This ia the one you've been waiting for.</h4>
+		<button class="ful">Click Here &rarr;</button>
 		</div>
 	</div>
 </main>
 
-<hr style="background: linear-gradient(to right,transparent,#ffcc00);height: 9px;width: 44%;float: left;border: none;margin-top: 13px;">
-<span style="float: left;margin: 5px;margin-left: 12px;margin-right: 12px ;font-size: 22px">Instant Grams</span>
-<hr style="background: linear-gradient(to right,#ffcc00,transparent);height: 9px;width: 44%;float: left;border: none;margin-top: 13px;">
-
+<section>
+	<hr style="background: linear-gradient(to right,transparent,#ffcc00);">
+	<span class="instant">Instant Grams</span>
+	<hr style="background: linear-gradient(to right,#ffcc00,transparent);">
+</section>
 
 <footer>
 	<img class="square" src="1.jpg" alt="nature">
@@ -167,7 +96,6 @@
 	<img class="square" src="12.jpg" alt="nature">
 	<img class="square" src="13.jpg" alt="nature">
 	
-
 
 </footer>
 </body>
