@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>progress bar</title>
+	<style>
+.container{
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+.circle.completed{
+  border: 2px solid #4B81BD;
+  background: #4B81BD; 
+}
+.circle-hr.completed{
+	background-color: blue;
+}
+.circle{
+	width: 20px;
+	height: 20px;
+	background: white;
+	border: 2px solid black;
+	border-radius: 50%;
+	float: left;
+	
+
+}
+.circle-hr{
+	float: left;
+	width: 40px;
+	height: 2px;
+	background-color : black;
+	margin-top: 10px;
+}
+
+	</style>
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="circle completed">
+    	
+    </div>
+    <hr class="circle-hr completed">
+    <div class="circle">
+    	
+    </div>
+    <hr class="circle-hr">
+    <div class="circle">
+    	
+    </div>
+    <hr class="circle-hr">
+    <div class="circle">
+    	
+    </div>
+    <hr class="circle-hr">
+    <div class="circle">
+    	
+    </div>
+  </div>
+
+
+</body>
+</html>
