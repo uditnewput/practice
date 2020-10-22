@@ -1,13 +1,14 @@
 		body{
 			background-image: linear-gradient(115deg ,#FF33a0 ,#8040bf); 
 			background-size: cover;
+			font-family: Arial;
 		}
 		nav{
 			position: sticky;
 			top: 0;
-			text-align: center;
+			
 			margin-top: 30px;
-			margin-bottom: 20px
+			margin-bottom: 20px;
 		}
 		button{
 			width: 19%;
@@ -22,20 +23,32 @@
 		}
 		ul{
 			list-style-type: none;
-			width: 19%;
-			height:35px;
+			padding-inline-start:3px;
+		}
+		li.nav{
+			display: inline-block;
+			width: 222px;
+			
 			font-size: 16px;
-			font-weight: 16px;
+			font-weight: bold;
 			background-color: #ffcc00;
 			padding: 7px;
+			margin: 6px;
+			text-align: center;
 		}
-		li{
-			display: inline-block;
-		}
-		header,main,footer,section{
+		
+		header,main,section{
 			margin-left: 9px;
 			margin-right: 9px;
 			clear: both;
+		}
+		footer{
+			clear: both;
+			
+		}
+		header .taco{
+			float: left;
+			margin-top:  10px;
 		}
 		div.price{
 			width:415px;
@@ -81,13 +94,14 @@
 			
 		}
 		img.square{
-			width: 187px;
-			height: 187px;
+			width: 184px;
+			height: 184px;
 			
 			float: left;
-			margin-right: 24px; 
-			margin-bottom: 24px;
+			margin-right: 12px; 
+			margin-bottom: 6px;
 			margin-top: 20px;
+			margin-left: 14px;
 		}
 		hr{
 			height: 9px;
@@ -98,9 +112,9 @@
 		}
 		span.instant{
 			float: left;margin: 5px;
-			margin-left: 12px;
-			margin-right: 12px ;
-			font-size: 22px
+			margin-left: 10px;
+			margin-right: 10px ;
+			font-size: 20px
 		}
 		div.ful{
 			float:left;
@@ -115,4 +129,10 @@
 			margin-top: 20px; 
 			float: left;
 			width: 400px;
+		}
+		.margin-right-0{
+			margin-right: 0px;
+		}
+		.margin-left-1{
+			margin-left: 1px;
 		}
