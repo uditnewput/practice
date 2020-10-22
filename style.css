@@ -20,6 +20,18 @@
 			margin: 4px;
 			height: 35px;
 		}
+		ul{
+			list-style-type: none;
+			width: 19%;
+			height:35px;
+			font-size: 16px;
+			font-weight: 16px;
+			background-color: #ffcc00;
+			padding: 7px;
+		}
+		li{
+			display: inline-block;
+		}
 		header,main,footer,section{
 			margin-left: 9px;
 			margin-right: 9px;
