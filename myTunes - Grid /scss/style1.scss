@@ -241,6 +241,18 @@ a:hover{
   }
   footer{
     text-align: center;
+    [class*="col-20"]{
+      width: 100%;
+    }
+
+    [class*="col-1"]{
+      width: 0;
+      padding: 0;
+    }
+    div{
+      margin-bottom: -1px;
+      overflow: hidden;
+    }
   }
 }
 
@@ -275,6 +287,10 @@ a:hover{
     [class*="col-1"]{
       width: 0;
       padding: 0;
+    }
+    div{
+      margin-bottom: -1px;
+      overflow: hidden;
     }
   }
 }

@@ -213,7 +213,15 @@ a:hover {
       margin-inline-start: 14px; }
 
   footer {
-    text-align: center; } }
+    text-align: center; }
+    footer [class*="col-20"] {
+      width: 100%; }
+    footer [class*="col-1"] {
+      width: 0;
+      padding: 0; }
+    footer div {
+      margin-bottom: -1px;
+      overflow: hidden; } }
 @media only screen and (max-width: 800px) {
   section.gift {
     text-align: center;
@@ -235,6 +243,9 @@ a:hover {
     width: 50%; }
   footer [class*="col-1"] {
     width: 0;
-    padding: 0; } }
+    padding: 0; }
+  footer div {
+    margin-bottom: -1px;
+    overflow: hidden; } }
 
 /*# sourceMappingURL=style1.css.map */
