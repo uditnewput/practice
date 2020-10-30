@@ -4,9 +4,11 @@ html,body{
 
 .card:hover{
   opacity: 0.9;
+  transform:scale(1.03);
 }
 
 .card {
+  transition: transform 1s;
   .card-flow{
     height: 200px;
   }
@@ -23,6 +25,7 @@ html,body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-top: 1.25rem !important;
   }
   .card-body{
     padding-top: 0px;
