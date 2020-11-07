@@ -1,0 +1,32 @@
+html, body {
+  font-family: Arial; }
+
+.card:hover {
+  opacity: 0.9;
+  transform: scale(1.03); }
+
+.card {
+  transition: transform 1s; }
+  .card .card-flow {
+    height: 200px; }
+  .card .img-ht {
+    height: 380px;
+    /* border: 5px solid white;
+    outline: 1px solid lightgrey; */
+    box-sizing: border-box; }
+  .card .card-header {
+    padding-bottom: 0px; }
+  .card .author {
+    height: 50px;
+    overflow: auto; }
+  .card .flexx {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.25rem !important; }
+  .card .card-body {
+    padding-top: 0px; }
+    .card .card-body .thumb-size {
+      font-size: 24px; }
+
+/*# sourceMappingURL=style.css.map */
