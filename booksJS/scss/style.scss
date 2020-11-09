@@ -9,32 +9,30 @@ html,body{
 
 .card {
   transition: transform 1s;
-  .card-flow{
-    height: 200px;
-  }
-  .img-ht{
-    height: 380px;
-    /* border: 5px solid white;
-    outline: 1px solid lightgrey; */
-    box-sizing: border-box;
-  }
-  .card-header{
-    padding-bottom: 0px;
-  }
   .author{
     height: 50px;
     overflow: auto;
-  }
-  .flexx{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 1.25rem !important;
   }
   .card-body{
     padding-top: 0px;
     .thumb-size{
       font-size:24px;
     }
+  }
+  .card-flow{
+    height: 200px;
+  }
+  .card-header{
+    padding-bottom: 0px;
+  }
+  .flexx{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.25rem !important;
+  }
+  .img-ht{
+    box-sizing: border-box;
+    height: 380px;
   }
 }
