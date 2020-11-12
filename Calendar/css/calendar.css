@@ -1,0 +1,41 @@
+html, body {
+  font-family: Arial; 
+  margin: 10px;
+}
+
+table {
+  table-layout: fixed;
+}
+
+table .table-cap {
+	caption-side: top;
+	font-size: 18px;
+	text-align: center;
+}
+
+table .table-cap .left {
+	float:  left;
+}
+
+table .table-cap .right {
+	float: right;
+}
+
+#show,#calendar{
+	display: none;
+}
+
+@media only screen and (max-width: 575px) {
+	table .table-cap {
+		caption-side: top;
+		text-align: center;
+	}
+
+	table .table-cap .left {
+		float: none;	
+	}
+
+	table .table-cap .right {
+		float: none;
+	}
+}
