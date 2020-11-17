@@ -129,26 +129,26 @@ function calDay(m,yy){
 	// Making string to insert in table ROWS and table COLUMNS according to leep year and breaking on SUNDAYS.
 	if ((yy % 4 == 0) && (yy % 100 != 0) || (yy % 400 == 0)) {
 		for(let x=1;x<=monthLeep[monthDays];x++){
-		
+
 			if(monthList[x]=="sun"){
-				str = str + "<td onclick='dateClick(this)' id='date" + x + "'>" + x + "</td></tr><tr>";
+				str = str + "<td onclick='dateClick(this)' id='date" + x + "'><button class='btn btn-sm btn-custom'>" + x + "</button></td></tr><tr>";
 			}else{
-				str = str + "<td onclick='dateClick(this)' id='date" + x + "'>" + x + "</td>";
+				str = str + "<td onclick='dateClick(this)' id='date" + x + "'><button class='btn btn-sm btn-custom'>" + x + "</button></td>";
 			}
 		}
 	} else {
 		for(let x=1;x<=monthNormal[monthDays];x++){
-		
+
 			if(monthList[x]=="sun"){
-				str = str + "<td onclick='dateClick(this)' id='date" + x + "'>" + x + "</td></tr><tr>";
+				str = str + "<td onclick='dateClick(this)' id='date" + x + "'><button class='btn btn-sm btn-custom'>" + x + "</button></td></tr><tr>";
 			}else{
-				str = str + "<td onclick='dateClick(this)' id='date" + x + "'>" + x + "</td>";
+				str = str + "<td onclick='dateClick(this)' id='date" + x + "'><button class='btn btn-sm btn-custom'>" + x + "</button></td>";
 			}
 		}
 	}
 
-	var str2 = "Year : <strong>"+yy +"</strong>, Month : <strong>"+monthName[--m]+"</strong>"; // Making string show month and year in table CAPTION.
-	
+	var str2 = "<strong>"+monthName[--m]+"</strong>, <strong>"+yy +"</strong>"; // Making string show month and year in table CAPTION.
+
 	str = str + "</tr>";	//Ending our dates string.
 	$("#cal").html(str);	// Inserting string into table.
 	$("#mmyyyy").html(str2); // To show month and year in table CAPTION.
@@ -200,7 +200,7 @@ function dateClick(a){
 	var yyyy = $("#year").val();
 	var mm = $("#month").val();
 	mm--;
-	let str3= "You selected <strong>"+ monthName[mm] + " " + a.innerHTML+"<sup>th</sup>, " + yyyy + "</strong>";
+	let str3= "You selected <strong>"+ monthName[mm] + " " + a.innerText+"<sup>th</sup>, " + yyyy + "</strong>";
 	$("#show").hide();
 	$("#calendar").html(str3).show();
 }
