@@ -1,0 +1,32 @@
+
+.box:hover {
+  box-shadow: 0 0 40px rgba(33,33,33,.2);
+  transform: scale(1.01);
+}
+.box {
+  width: 243px;
+  transition: box-shadow .3s;
+  transition: transform .3s;
+  .card{
+    height: 490px;
+    h5{
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    img{
+      height: 300px;
+      box-sizing: border-box;
+    }
+    .subtitle{
+      overflow: auto;
+    }
+  }
+}
+
+@media only screen and (max-widht:548px){
+  .box{
+    width: 300px!important;
+  }
+}

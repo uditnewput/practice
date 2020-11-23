@@ -1,0 +1,6 @@
+<!-- NAVBAR  -->
+<app-nav-bar></app-nav-bar>
+
+<!-- SIDEBAR and MAIN CONTENT  -->
+<app-main-content (childEvent)="message=$event" [parentData]="message"></app-main-content>
+

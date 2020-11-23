@@ -1,0 +1,110 @@
+<div class="m-2 text-secondary">
+  <h6>MyBooks > books > details > {{books.isbn13}}</h6>
+</div>
+
+<div class="col-lg-3 col-md-4 col-sm-8 m-0 p-0 float-left">
+  <img src="{{books.image}}" class="bg-secondary mt-2">
+    <a href="{{books.url}}" target="_blank"><button class="btn btn-primary m-2 ml-3" style="width: 100%">Buy</button></a>
+</div>
+
+<div class="col-lg-7 col-md-5 col-sm-8 m-4 ml-5 float-left">
+  <table class="table table-sm table-striped">
+    <tr>
+      <td>
+        Title
+      </td>
+      <td>
+        {{books.title}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Subtitle
+      </td>
+      <td>
+        {{books.subtitle}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Price
+      </td>
+      <td>
+        {{books.price}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Rating
+      </td>
+      <td>
+        {{books.rating}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Author(s)
+      </td>
+      <td>
+        {{books.authors | titlecase}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Publisher
+      </td>
+      <td>
+        {{books.publisher}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Published
+      </td>
+      <td>
+        {{books.year}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Pages
+      </td>
+      <td>
+        {{books.pages}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Language
+      </td>
+      <td>
+        {{books.language}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Format
+      </td>
+      <td>
+        PDF
+      </td>
+    </tr>
+    <tr>
+      <td>
+        ISBN number
+      </td>
+      <td>
+        {{books.isbn13}}
+      </td>
+    </tr>
+  </table>
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="home-tab" aria-controls="home" aria-selected="true">Description</a>
+    </li>
+  </ul>
+  <div class="m-2">
+    <div class="text-justify" id="home" role="tabpanel" aria-labelledby="home-tab">{{books.desc}}
+    </div>
+  </div>
+</div>

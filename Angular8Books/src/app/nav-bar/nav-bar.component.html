@@ -1,0 +1,10 @@
+<!-- NAVBAR START HERE -->
+<nav class="navbar bg-primary navbar-dark justify-content-between">
+  <a class="navbar-brand p-0 m-0"><h3 class="p-0 m-0">MyBooks</h3></a>
+  <form class="form-inline" [formGroup]="registrationForm">
+    <input class="form-control form-control-sm mr-sm-2" formControlName="isbn" type="text" pattern="[0-9]{13}" title="It should be 13 digit ISBN number." placeholder="Search books by ISBN">
+    <button class="btn btn-sm btn-outline-light my-2 my-sm-0" (click)="onSelectIsbn(registrationForm.value.isbn)" type="submit">Search</button>
+  </form>
+</nav>
+<!-- NAVBAR END HERE -->
+

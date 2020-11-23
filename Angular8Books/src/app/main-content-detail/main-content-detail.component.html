@@ -1,0 +1,26 @@
+<img *ngIf="loading" class="text-center" src="../assets/images/spinner.gif" style="height: 100px;width: 100px;">
+<div *ngIf="errorMsg" class="alert alert-danger" role="alert">
+  {{errorMsg}}
+</div>
+
+<!-- BOOK LIST START HERE -->
+<div *ngFor="let b of books.books">
+  <div class="float-left m-2 box">
+    <div class="card shadow">
+      <div class="card-header bg-primary text-center text-white p-1 pt-2" style="min-height: 90px;">
+        <h5>{{b.title}}</h5>
+      </div>
+      <img class="card-img-top p-0" src="{{b.image}}" alt="book">
+      <div class="card-body text-justify overflow-auto card-flow py-0" style="min-height: 45px;">
+        <small class="text-muted subtitle">{{b.subtitle}}</small>
+        <a (click)="onSelectCard(b.isbn13)" target="_blank" class="stretched-link"></a>
+      </div>
+      <ul class="list-group list-group-flush text-center">
+        <li class="list-group-item">Price {{b.price}}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- BOOK LIST START HERE -->
+
+<router-outlet></router-outlet>
