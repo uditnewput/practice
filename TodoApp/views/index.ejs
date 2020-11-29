@@ -1,0 +1,59 @@
+<!-- HEAD include -->
+<%- include('./partials/head.ejs') %>
+
+<body>
+  <!-- NAV BAR include  -->
+  <%- include('./partials/nav.ejs') %>
+
+  <div class="row mx-0">
+    <!-- SIDEBAR include  -->
+    <%- include('./partials/sidebar.ejs') %>
+
+    <!-- MAIN CONTENT START -->
+    <div class="col-lg-10 col-md-9 col-sm-8 mt-2">
+
+      <!-- ADD note form START -->
+      <div class="text-center">
+        <h3>Want to add new note?</h3>
+      </div>
+      <div>
+        <form action="/newNote" method="POST">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" name="username" class="form-control" id="username" placeholder="Enter username" required>
+          </div>
+          <div class="form-group">
+            <label for="note">Todo note</label>
+            <textarea class="form-control" name="note" id="note" rows="3" placeholder="Enter your note here" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-dark mb-3">Submit</button>
+        </form>
+      </div>
+
+      <!-- SELECT name and search for note.  -->
+      <div class="text-center">
+        <h3>Want to read your notes?</h3>
+      </div>
+      <div>
+        <form action="/todo" method="GET">
+          <div class="form-group">
+            <label for="Select1">Example select</label>
+            <select class="form-control" name="name" id="Select1">
+              <% var arr1=['Deepak','Hemant','Piyush','Udit'] %>
+              <% arr1.forEach(name => { %>
+                <option value="<%= name %>"><%= name %></option>
+              <% }); %>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-dark mb-3">Select</button>
+        </form>
+      </div>
+
+    </div>
+    <!-- MAIN CONTENT END -->
+  </div>
+
+<!-- FOOTER include  -->
+<%- include('./partials/footer.ejs') %>
+
+

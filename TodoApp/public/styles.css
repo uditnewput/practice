@@ -1,0 +1,78 @@
+#example_wrapper {
+  display: block;
+}
+#example_length label {
+  justify-content: left;
+}
+
+#example_filter label {
+  display: none;
+}
+#example_length select {
+  margin:10px;
+}
+.addNoteForm {
+  overflow: auto;
+  height: 0px;
+  transition: height 2s
+}
+.noteTable {
+  width: 100%;
+}
+
+.noteTable th.width-5 {
+  width: 5%;
+}
+.noteTable th.width-15 {
+  width: 15%;
+}
+.noteTable th.width-65 {
+  width: 65%;
+}
+
+.noteInput {
+  width: 100%;
+  background-color: inherit;
+  color: white;
+}
+.noteButton {
+  display: none;
+}
+
+.note-icon-button {
+  height: 35px;
+  width: 35px;
+}
+
+.note-icon-button-size-21 {
+  font-size: 21px;
+}
+.note-icon-button-size-23 {
+  font-size: 23px;
+}
+
+.pagination li a {
+  color:white;
+  text-decoration: none;
+  width:70px;
+  text-align: center;
+  border: #343a40;
+  border-radius: .25rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: #343a40;
+  margin:5px;
+  padding: .375rem .75rem;
+  transition: background-color .15s ease-in-out;
+
+}
+.pagination li a:hover {
+  background-color: #343a40;
+}
+.pagination {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}

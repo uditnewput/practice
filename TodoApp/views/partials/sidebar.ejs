@@ -1,0 +1,22 @@
+<div class="col-lg-2 col-md-3 col-sm-4 bg-light">
+  <ul class="nav nav-pills flex-column mt-2">
+    <% if (notes.length>0){
+      var ac = notes[0].username;
+    } else {
+      var ac = "";
+    }%>
+
+    <!-- ADD Username here -->
+    <% var arr1 = ['Deepak','Hemant','Piyush','Udit'] %>
+    <% arr1.forEach(name=>{ %>
+      <li class="nav-item text-xs-center text-lg-left" style="cursor: pointer;">
+        <% if(ac==name){ %>
+          <% var active="bg-dark text-light" %>
+        <% } else {%>
+          <% var active="text-dark" %>
+        <% } %>
+          <a class="nav-link <%= active %>" href="/todo?name=<%= name %>"><%= name %></a>
+      </li>
+    <% }) %>
+  </ul>
+</div>

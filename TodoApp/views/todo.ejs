@@ -1,0 +1,102 @@
+<!-- HEAD include -->
+<%- include('./partials/head.ejs') %>
+
+<body>
+  <!-- NAV BAR include  -->
+  <%- include('./partials/nav.ejs') %>
+
+  <div class="row mx-0">
+    <!-- SIDEBAR include  -->
+    <%- include('./partials/sidebar.ejs') %>
+
+    <!-- MAIN CONTENT START -->
+    <div class="col-lg-10 col-md-9 col-sm-8 mt-2">
+
+      <!-- ADD note form START -->
+      <div class="text-center">
+        Want to add new note?<button class="btn btn-dark ml-2 mb-2" onclick="show()">Click here!</button>
+      </div>
+      <div id="show" class="addNoteForm">
+        <form action="/newNote" method="POST">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" name="username" class="form-control" id="username" placeholder="Enter username" required>
+          </div>
+          <div class="form-group">
+            <label for="note">Todo note</label>
+            <textarea class="form-control" name="note" id="note" rows="3" placeholder="Enter your note here" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-dark mb-3">Submit</button>
+        </form>
+      </div>
+      <!-- ADD note form END -->
+
+      <!-- TODO LIST TABLE appears here  -->
+      <table id="example" class="table table-striped table-borderless table-dark text-light noteTable">
+        <thead class="text-light">
+          <tr>
+            <th class="width-5">No.</th>
+            <th class="width-15">Date</th>
+            <th class="width-65">ToDo</th>
+            <th class="width-5">Done</th>
+            <th class="width-5">Edit</th>
+            <th class="width-5">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% if (notes.length>0){ %>
+            <% var count = 1; %>
+            <% notes.forEach(note => { %>
+              <tr>
+                <td><%= count %></td>
+                <% var date = String(note.updatedAt) %>
+                <!-- slicing datetime string to get desired date   -->
+                <td><%= date.slice(4,15) %></td>
+                <td class="p-1">
+                  <!-- UPDATE FORM  -->
+                  <form action="/updateNote" method="POST">
+                    <input type="text" name="nid" value="<%= note.id %>" hidden>
+                    <input class="form-control-plaintext text-light" type="text" id="editInput<%= note.id %>" name="note" value="<%= note.data %>" style="width: 100%;background-color: inherit;color: white;" readonly>
+                    <button class="btn btn-sm btn-secondary m-1" type="submit" id="editInputButton<%= note.id %>" style="display: none;">Update</button>
+                  </form>
+                </td>
+
+                <td class="p-1 text-center">
+                  <!-- SET STATUS TO DONE USING THIS BUTTON  -->
+                  <a href="/doneNote/<%= note.id %>">
+                    <button class="btn btn-success p-1 m-0 note-icon-button">
+                      <i class="far fa-check-square note-icon-button-size-23"></i>
+                    </button>
+                  </a>
+                </td>
+
+                <td class="p-1 text-center">
+                  <!-- EDIT/UPDATE NOTE BUTTON  (this button will toggle hide/unhide of update form fields)-->
+                  <% var editInput = note.id %>
+                  <button class="btn btn-secondary p-1 note-icon-button" onclick="edit(<%= editInput %>)">
+                    <i class="far fa-edit note-icon-button-size-21"></i>
+                  </button>
+                </td>
+
+                <td class="p-1 text-center">
+                  <!-- DELETE NOTE BUTTON  -->
+                  <a href="/deleteNote/<%= note.id %>">
+                    <button class="btn btn-danger p-1 note-icon-button">
+                      <i class="far fa-trash-alt note-icon-button-size-21"></i>
+                    </button>
+                  </a>
+                </td>
+
+              </tr>
+              <% count++; %>
+            <% });  %>
+          <% } %>
+        </tbody>
+      </table>
+
+    </div>
+    <!-- MAIN CONTENT END -->
+  </div>
+  <!-- FOOTER include  -->
+  <%- include('./partials/footer.ejs') %>
+
